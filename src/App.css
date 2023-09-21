@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+header{
+    width: 100%;
+    background-color: slateblue;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.menu-container{
+    width: 80%;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu-container nav > .navbar {
+    display: flex;
+    gap: 20px;
+    list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar > .nav-item{
+    cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-item > .nav-link, #logo a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+ .container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    overflow-x: hidden;
+ }
+
+ .row{
+    width: 100%;
+    position: relative;
+ }
+
+ .title{
+    width: 100%;
+    padding: 30px;
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+ }
+
+ .form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+ }
+
+ .form .form-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .form-group input {
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border-radius: 20px;
+ }
+
+ .form-group button{
+    padding: 10px 12px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: 1px solid #222;
+    border-radius: 20px;
+    background-color: #222;
+    color: #fff;
+    margin: 5px;
+ }
+
+ /* no user */
+
+ .no-user{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+ }
+
+ .no-user h3{
+   color: red;
+ }
+
+ .no-user h1{
+   color: #343;
+ }
+
+ /* profile card */
+ .profile{
+   width: 100%;
+   overflow-x: hidden;
+   height: 500px;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+ }
+
+ .profile .card{
+   width: 60%;
+   margin: auto;
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+   gap: 30px;
+   background-color: #ddd;
+   padding: 10px;
+   border-radius: 20px;
+ }
+
+ .card .card-header{
+   width: 200px;
+   height: 200px;
+ }
+
+ .card-header img{
+   width: 100%;
+   border-radius: 50%;
+   object-fit: cover;
+ }
+
+ .card-body ul li {
+  list-style: none;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  font-size: 1.1em;
+ }
 
-.App-link {
-  color: #61dafb;
-}
+ li strong {
+  background-color: #222;
+  color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+ }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ @media screen and (max-width:886px) {
+  .profile .card{
+    width: 100%;
+    transition: all 0.3s ease;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ }
